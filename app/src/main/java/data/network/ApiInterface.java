@@ -6,6 +6,7 @@ import bean.DepartmentListBean;
 import bean.EmployeesListBean;
 import bean.EnquiryCanListBean;
 import bean.EnquiryViewBean;
+import bean.InsertFeedbackBean;
 import bean.LoginDataBean;
 import bean.NewEnquiryFormBean;
 import bean.ProductServiceBean;
@@ -62,7 +63,6 @@ public interface ApiInterface {
             @Field("departmentId")String departmentId
     );
 
-
     @FormUrlEncoded
     @POST("crm/get_product_services_list.php")
     Call<ProductServiceBean> getProductServicesList(
@@ -92,5 +92,14 @@ public interface ApiInterface {
             @Field("createdBy")String createdBy
     );
 
+    @FormUrlEncoded
+    @POST("crm/insert_feedback.php")
+    Call<InsertFeedbackBean> insertFeedback(
+            @Field("token")String token,
+            @Field("enquiryId")String enquiryId,
+            @Field("feedBack")String feedBack,
+            @Field("feedBackDate")String feedBackDate,
+            @Field("createdBy")String createdBy
+    );
 
 }

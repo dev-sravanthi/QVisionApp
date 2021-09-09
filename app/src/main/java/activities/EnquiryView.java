@@ -28,11 +28,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.quadsel.qvisionapp.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import bean.EnquiryViewBean;
+import bean.InsertFeedbackBean;
+import bean.NewEnquiryFormBean;
 import data.repo.RetrofitClient;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -148,7 +153,7 @@ public class EnquiryView extends AppCompatActivity {
                                 return;
                             }
 
-                            System.out.println(st_ed_feedback_popup+"====="+st_ed_feedback_follwupdate);
+                            System.out.println(token+"========"+enquiryId+"========"+st_ed_feedback_popup+"====="+st_ed_feedback_follwupdate+"====="+login_id);
                             Toast.makeText(EnquiryView.this, "Feedback Entered Successfully", Toast.LENGTH_SHORT).show();
                             alertDialog.cancel();
                         }
@@ -180,6 +185,93 @@ public class EnquiryView extends AppCompatActivity {
     }
 
     private void insertFeedback(){
+        showBar();
+
+        Call<InsertFeedbackBean> call= RetrofitClient.getInstance().getApi().insertFeedback(token,enquiryId,st_ed_feedback_popup,st_ed_feedback_follwupdate,login_id);
+        call.enqueue(new Callback<InsertFeedbackBean>() {
+            @Override
+            public void onResponse(Call<InsertFeedbackBean> call, Response<InsertFeedbackBean> response) {
+
+                progressDialog.dismiss();
+
+                if(response.isSuccessful()){
+                    InsertFeedbackBean crmGetClientList=response.body();
+
+                    status=crmGetClientList.getStatus();
+
+                    if(status.equals("true")){
+                        Toast.makeText(EnquiryView.this, "Submitted successfully", Toast.LENGTH_SHORT).show();
+                    }else{
+                        status_message=crmGetClientList.getStatus_message();
+                        new android.app.AlertDialog.Builder(EnquiryView.this)
+                                .setCancelable(false)
+                                .setTitle("Info")
+                                .setMessage(status_message)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent i=new Intent(EnquiryView.this,MenuScreen.class);
+                                        i.putExtra("token",token);
+                                        i.putExtra("login_id",login_id);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                })
+                                .show();
+                    }
+
+                }else{
+                    progressDialog.dismiss();
+                    JSONObject jObjError = null;
+                    try {
+                        jObjError = new JSONObject(response.errorBody().string());
+                        String error=jObjError.getString("message");
+
+                        new android.app.AlertDialog.Builder(EnquiryView.this)
+                                .setCancelable(false)
+                                .setTitle("Error")
+                                .setMessage(error)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent i=new Intent(EnquiryView.this,MenuScreen.class);
+                                        i.putExtra("token",token);
+                                        i.putExtra("login_id",login_id);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                })
+                                .show();
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<InsertFeedbackBean> call, Throwable t) {
+                progressDialog.dismiss();
+                new android.app.AlertDialog.Builder(EnquiryView.this)
+                        .setCancelable(false)
+                        .setTitle("Error")
+                        .setMessage(status_message)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent i=new Intent(EnquiryView.this,MenuScreen.class);
+                                i.putExtra("token",token);
+                                i.putExtra("login_id",login_id);
+                                startActivity(i);
+                                finish();
+                            }
+                        }).show();
+            }
+        });
 
     }
 
