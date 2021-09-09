@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <util.MyCustomTextView
+                android:id="@+id/text_feedback"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Feedback"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15dp"/>
+
+            <util.MyCustomTextView
+                android:id="@+id/text_feedbackdate"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Feedback Date"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15dp"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

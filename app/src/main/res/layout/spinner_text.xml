@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<util.MyCustomTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/_20sdp"
+    android:textAppearance="@android:style/TextAppearance.Small"
+    android:textColor="@color/black"
+    android:height="30dip"
+    android:gravity="left|center_vertical"
+    android:paddingLeft="5dip"
+    />

@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/header"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <include
+            layout="@layout/toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+
+<!--                <util.MyCustomTextView_Bold-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="@dimen/_10sdp"-->
+<!--                    android:layout_marginTop="@dimen/_10sdp"-->
+<!--                    android:layout_marginRight="@dimen/_10sdp"-->
+<!--                    android:layout_marginBottom="@dimen/_5sdp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Enquiry Form"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/_18sdp" />-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Enquiry Details"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Call Type"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_calltype"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Client Type"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_clienttype"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Company Name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_companyname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Location"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_location"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Address"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_address"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Client Name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_clientname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Contact No."
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_contactno"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Designation"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_designation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Email ID"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_emailid"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Service"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_service"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Feedback"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_feedback"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Followup Date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_followupdate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Department"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_department"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_5sdp">
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:text="Employee Name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_marginLeft="@dimen/_10sdp"/>
+
+                            <util.MyCustomTextView_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:layout_alignLeft="@+id/text1"
+                                android:layout_alignRight="@+id/textView3"
+                                android:text=":"
+                                android:textColor="#000" />
+
+                            <util.MyCustomEditText
+                                android:id="@+id/ed_employeename"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/edittext_rounded_box"
+                                android:layout_gravity="center"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/cv_feedackentrydetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_technical_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <util.MyCustomTextView_Bold
+                            android:id="@+id/text_technical_feedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Feedback Entry Details"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/btn_blue"/>
+
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TableLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:background="#032462">
+
+                                    <util.MyCustomTextView_Bold
+                                        android:layout_width="150dp"
+                                        android:layout_height="30dp"
+                                        android:text="Feedback"
+                                        android:textColor="@color/white"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textSize="15dp"/>
+
+                                    <util.MyCustomTextView_Bold
+                                        android:layout_width="150dp"
+                                        android:layout_height="30dp"
+                                        android:text="Feedback Date"
+                                        android:textColor="@color/white"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textSize="15dp"/>
+
+                                </TableRow>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_feedbackentrydetails"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                            </TableLayout>
+
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/btn_addfeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Feedback"
+                    android:background="@drawable/button_style"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/greenone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <util.ScrollTextView
+                android:id="@+id/scrolltext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:text="TSDPS Website"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

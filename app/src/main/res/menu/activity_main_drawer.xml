@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <!--<item-->
+            <!--android:id="@+id/nav_gallery"-->
+            <!--android:icon="@drawable/logo"-->
+            <!--android:title="Gallery" />-->
+        <item
+            android:id="@+id/nav_awards"
+            android:title="Awards" />
+        <!--<item-->
+            <!--android:id="@+id/navfaqs"-->
+            <!--android:icon="@drawable/card_details"-->
+            <!--android:title="FAQs" />-->
+
+        <item
+            android:id="@+id/nav_contact"
+            android:title="Contact" />
+        <item
+            android:id="@+id/nav_Help_line"
+            android:title="Helpline" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_contact"-->
+                <!--android:title="Contact" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_Help"-->
+                <!--android:title="Help" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

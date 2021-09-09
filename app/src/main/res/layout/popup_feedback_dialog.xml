@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_5sdp">
+
+        <util.MyCustomTextView_Bold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="Feedback"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginLeft="@dimen/_20sdp"/>
+
+        <util.MyCustomTextView_Bold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_alignLeft="@+id/text1"
+            android:layout_alignRight="@+id/textView3"
+            android:text=":"
+            android:textColor="#000" />
+
+        <util.MyCustomEditText
+            android:id="@+id/ed_feedback_popup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/edittext_rounded_box"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/_12ssp"
+            android:hint="Enter Feedback"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_5sdp">
+
+        <util.MyCustomTextView_Bold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="Feedback Followup Date"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <util.MyCustomTextView_Bold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_alignLeft="@+id/text1"
+            android:layout_alignRight="@+id/textView3"
+            android:text=":"
+            android:textColor="#000"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+<!--        <util.MyCustomEditText-->
+<!--            android:id="@+id/ed_feedback_follwupdate"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.9"-->
+<!--            android:layout_marginRight="@dimen/_12sdp"-->
+<!--            android:background="@drawable/edittext_rounded_box"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="@dimen/_12ssp"/>-->
+
+        <util.MyCustomEditText
+            android:id="@+id/ed_feedback_follwupdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/edittext_rounded_box"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:hint="mm/dd/yyyy"/>
+
+        <Button
+            android:id="@+id/btn_foolowup_date"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_gravity="end|center_vertical"
+            android:background="@drawable/datepicker"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textSize="@dimen/_13sdp"
+            android:background="@drawable/button_style"
+            android:padding="@dimen/_3sdp"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_submit_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:textSize="@dimen/_13sdp"
+            android:background="@drawable/button_style"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_3sdp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

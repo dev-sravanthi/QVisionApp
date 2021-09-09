@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:background="@drawable/header"-->
+<!--        android:scaleType="fitXY"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/_16sdp"
+                android:paddingRight="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:src="@drawable/quadsel_logo"/>
+
+                <util.MyCustomTextView_Bold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Q Vision"
+                    android:textSize="@dimen/_25sdp"
+                    android:textColor="@color/teal_700"
+                    android:layout_marginTop="15dp"/>
+
+                <util.MyCustomEditText
+                    android:id="@+id/ed_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/shape"
+                    android:drawableLeft="@drawable/ic_person_black_24dp"
+                    android:gravity="center"
+                    android:hint="Enter Username"
+                    android:textColor="@color/black"/>
+
+                <util.MyCustomEditText
+                    android:id="@+id/ed_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/shape"
+                    android:hint="Enter Password"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:inputType="textPassword"
+                    android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:background="@drawable/button_style"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:textSize="@dimen/_15sdp"/>
+
+                <Button
+                    android:id="@+id/btn_test_popup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="popup"
+                    android:background="@drawable/button_style"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:textSize="@dimen/_15sdp"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <util.ScrollTextView
+                android:id="@+id/scrolltext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="TSDPS Website"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

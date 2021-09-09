@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">QVisionApp</string>
+    <string name="footer">Designed &amp; Developed by Bluebase Software Service Pvt. Ltd.</string>
+
+    <string-array name="clienttype">
+        <item>-Select-</item>
+        <item>Existing</item>
+        <item>New</item>
+    </string-array>
+
+    <string-array name="calltype">
+        <item>-Select-</item>
+        <item>Incoming</item>
+        <item>Outgoing</item>
+        <item>Direct</item>
+    </string-array>
+
+    <string-array name="product_service">
+        <item>-Select-</item>
+        <item>Product</item>
+        <item>Services</item>
+        <item>Solutions</item>
+    </string-array>
+
+</resources>
